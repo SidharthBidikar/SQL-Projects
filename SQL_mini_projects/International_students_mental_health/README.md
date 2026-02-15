@@ -71,8 +71,8 @@ WHERE inter_dom = 'Inter'
 GROUP BY stay
 ORDER BY stay DESC;
 ```
-"C:\Users\Sidharth\Pictures\Screenshots\Screenshot 2026-02-16 025934.png"
----
+-<img width="922" height="756" alt="Screenshot 2026-02-16 025934" src="https://github.com/user-attachments/assets/75894ab1-c7a7-4bde-8194-d55dab582c10" />
+--
 
 ## 📊 Key Observations
 
