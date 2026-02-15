@@ -71,7 +71,7 @@ WHERE inter_dom = 'Inter'
 GROUP BY stay
 ORDER BY stay DESC;
 ```
-
+"C:\Users\Sidharth\Pictures\Screenshots\Screenshot 2026-02-16 025934.png"
 ---
 
 ## 📊 Key Observations
