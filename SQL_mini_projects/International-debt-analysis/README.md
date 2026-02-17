@@ -54,7 +54,7 @@ GROUP BY country_name
 ORDER BY total_debt DESC
 LIMIT 1;
 ```
-<img width="964" height="753" alt="Screenshot 2026-02-17 215058" src="https://github.com/user-attachments/assets/b3273f31-5f6f-41cf-aab8-a780ae1ed083" />
+<img width="958" height="376" alt="Screenshot 2026-02-17 220831" src="https://github.com/user-attachments/assets/da7c9251-3cb1-4a0b-b769-76443dd40b56" />
 
 ### 3️⃣ Country with the Lowest Principal Repayment
 
