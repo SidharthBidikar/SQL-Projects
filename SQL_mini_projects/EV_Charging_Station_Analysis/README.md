@@ -62,6 +62,7 @@ WHERE user_type = 'Shared'
 GROUP BY garage_id
 ORDER BY num_unique_users DESC;
 ```
+<img width="957" height="562" alt="Screenshot 2026-02-18 004019" src="https://github.com/user-attachments/assets/df651412-e0f5-41cc-9d55-9161c074ef8c" />
 
 ## 📌 Insight
 
@@ -97,7 +98,7 @@ GROUP BY weekdays_plugin, start_plugin_hour
 ORDER BY num_charging_sessions DESC
 LIMIT 10;
 ```
-<img width="957" height="562" alt="Screenshot 2026-02-18 004019" src="https://github.com/user-attachments/assets/985c514f-3ce7-4f44-81d5-5a1b31e5df1f" />
+<img width="957" height="647" alt="Screenshot 2026-02-18 004031" src="https://github.com/user-attachments/assets/7d43419c-087b-4e54-9d05-84ceb1e531c5" />
 
 ## 📌 Insight
 
