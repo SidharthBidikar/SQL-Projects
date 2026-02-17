@@ -14,9 +14,6 @@ The goal is to generate insights that help building managers optimize charger av
 
 ---
 
-```
-```
-
 ---
 
 ## 🛢 Dataset Description
@@ -186,9 +183,4 @@ This analysis enables apartment building managers to:
 - Structuring portfolio-ready SQL projects
 
 ---
-
-## 👤 Author
-
-Sid  
-Aspiring Data Analyst | Building practical SQL projects to strengthen analytical skills
 
