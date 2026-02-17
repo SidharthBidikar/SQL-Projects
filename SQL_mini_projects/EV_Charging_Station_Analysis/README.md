@@ -54,6 +54,7 @@ GROUP BY garage_id
 ORDER BY num_unique_users DESC;
 
 ---
+---
 
 ## 2️⃣ Find the Top 10 Most Popular Shared Charging Start Times
 
