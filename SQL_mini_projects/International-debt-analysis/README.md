@@ -37,9 +37,9 @@ Return a single row and column aliased as `total_distinct_countries`.
 SELECT 
     COUNT(DISTINCT country_code) AS total_distinct_countries
 FROM public.international_debt;
-```
 
 <img width="927" height="344" alt="Screenshot 2026-02-17 215038" src="https://github.com/user-attachments/assets/9fb185c5-6dad-4ec1-827a-09bbf7fbb8f7" />
+```
 ---
 
 ### 2️⃣ Country with the Highest Total Debt
@@ -54,6 +54,8 @@ FROM public.international_debt
 GROUP BY country_name
 ORDER BY total_debt DESC
 LIMIT 1;
+
+<img width="964" height="753" alt="Screenshot 2026-02-17 215058" src="https://github.com/user-attachments/assets/b3273f31-5f6f-41cf-aab8-a780ae1ed083" />
 ```
 
 ---
@@ -73,6 +75,8 @@ FROM public.international_debt
 WHERE indicator_code = 'DT.AMT.DLXF.CD'
 ORDER BY debt ASC
 LIMIT 1;
+
+<img width="965" height="401" alt="Screenshot 2026-02-17 215108" src="https://github.com/user-attachments/assets/1ccdc5cc-5473-424f-b53d-2828bf5b49cc" />
 ```
 
 ---
