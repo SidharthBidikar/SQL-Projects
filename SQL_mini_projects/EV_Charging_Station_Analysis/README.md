@@ -133,7 +133,7 @@ GROUP BY user_id
 HAVING AVG(duration_hours) > 10
 ORDER BY avg_charging_duration DESC;
 ```
-
+<img width="954" height="507" alt="Screenshot 2026-02-18 004043" src="https://github.com/user-attachments/assets/e7620fd5-bf6c-4521-aa7d-56002baa0f77" />
 ## 📌 Insight
 
 This identifies users who may be occupying shared charging stations for extended periods, potentially reducing availability for others.
