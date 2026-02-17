@@ -97,6 +97,7 @@ GROUP BY weekdays_plugin, start_plugin_hour
 ORDER BY num_charging_sessions DESC
 LIMIT 10;
 ```
+<img width="957" height="562" alt="Screenshot 2026-02-18 004019" src="https://github.com/user-attachments/assets/985c514f-3ce7-4f44-81d5-5a1b31e5df1f" />
 
 ## 📌 Insight
 
