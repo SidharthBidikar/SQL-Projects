@@ -182,6 +182,3 @@ This analysis enables apartment building managers to:
 - Using filtering and grouping effectively
 - Analytical problem solving
 - Structuring portfolio-ready SQL projects
-
----
-
