@@ -17,13 +17,6 @@ The goal is to generate insights that help building managers optimize charger av
 ## 🗂 Repository Structure
 
 ```
-SQL Projects/
-│
-└── SQL Mini Projects/
-    │
-    └── EV Charging Behavior Analysis/
-        ├── README.md
-        └── project_sql_queries.sql
 ```
 
 ---
