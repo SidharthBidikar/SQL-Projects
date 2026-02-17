@@ -14,8 +14,6 @@ The goal is to generate insights that help building managers optimize charger av
 
 ---
 
----
-
 ## 🛢 Dataset Description
 
 The dataset is stored in a PostgreSQL table named:
