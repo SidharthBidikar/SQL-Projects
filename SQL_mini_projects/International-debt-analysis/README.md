@@ -39,6 +39,7 @@ SELECT
 FROM public.international_debt;
 ```
 
+<img width="927" height="344" alt="Screenshot 2026-02-17 215038" src="https://github.com/user-attachments/assets/9fb185c5-6dad-4ec1-827a-09bbf7fbb8f7" />
 ---
 
 ### 2️⃣ Country with the Highest Total Debt
