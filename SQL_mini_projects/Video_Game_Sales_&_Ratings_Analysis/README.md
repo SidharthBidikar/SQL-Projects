@@ -123,8 +123,6 @@ Return:
 
 Sort by `year` in ascending order.
 
-Save the output as a DataFrame named **`golden_years`**.
-
 ---
 
 # 💻 SQL Solutions
@@ -133,41 +131,16 @@ Save the output as a DataFrame named **`golden_years`**.
 
 ## 🥇 Solution 1 – Best Selling Games
 
+### Objective
+Find the ten best-selling games and return all columns from `game_sales`, sorted by `games_sold` in descending order.
+
+### SQL Query
+
 ```sql
 SELECT *
 FROM game_sales
 ORDER BY games_sold DESC
 LIMIT 10;
 
----
 
-## 🏆 Task 2: Top 10 Years by Average Critic Score
-
-### Objective
-
-Identify the ten years with the highest average critic score, ensuring statistical reliability by including only years with at least **4 games released**.
-
-### Requirements
-
-- Include only years where `num_games >= 4`
-- Return:
-  - `year`
-  - `num_games`
-  - `avg_critic_score`
-- Round `avg_critic_score` to **2 decimal places**
-- Sort results by `avg_critic_score` in descending order
-- Save output as **`critics_top_ten_years`**
-
----
-
-### SQL Query
-
-```sql
-SELECT
-    year,
-    num_games,
-    ROUND(avg_critic_score, 2) AS avg_critic_score
-FROM critics_avg_year_rating
-WHERE num_games >= 4
-ORDER BY avg_critic_score DESC
-LIMIT 10;
+Save the output as a DataFrame named **`golden_years`**.
