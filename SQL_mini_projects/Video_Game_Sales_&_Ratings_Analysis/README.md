@@ -142,6 +142,7 @@ FROM game_sales
 ORDER BY games_sold DESC
 LIMIT 10;
 ```
+<img width="954" height="534" alt="Screenshot 2026-02-19 004752" src="https://github.com/user-attachments/assets/5081bce2-363b-419f-a49e-62043ada696d" />
 
 ## 🏆 Solution 2 – Top 10 Years by Average Critic Score
 
@@ -161,6 +162,8 @@ WHERE num_games >= 4
 ORDER BY avg_critic_score DESC
 LIMIT 10;
 ```
+<img width="956" height="613" alt="Screenshot 2026-02-19 004806" src="https://github.com/user-attachments/assets/5edca9ff-e109-4f1e-a2b1-aea6ea28b48b" />
+
 ---
 
 ## 🌟 Solution 3 – Golden Years (Critics & Users Agreement)
@@ -185,3 +188,4 @@ WHERE C.avg_critic_score > 9
    OR U.avg_user_score > 9
 ORDER BY U.year ASC;
 ```
+<img width="954" height="569" alt="Screenshot 2026-02-19 004817" src="https://github.com/user-attachments/assets/16a30225-6de7-4490-82a9-1145afa6dc9e" />
