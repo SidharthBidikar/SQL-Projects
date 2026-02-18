@@ -161,3 +161,27 @@ WHERE num_games >= 4
 ORDER BY avg_critic_score DESC
 LIMIT 10;
 ```
+---
+
+## 🌟 Solution 3 – Golden Years (Critics & Users Agreement)
+
+### Objective
+
+Find the years where critics and users broadly agreed that the games released were highly rated — specifically where the average critic score was greater than 9 OR the average user score was greater than 9. The results should be ordered by year in ascending order.
+
+### SQL Query
+
+```sql
+SELECT
+    U.year,
+    U.num_games,
+    C.avg_critic_score,
+    U.avg_user_score,
+    (C.avg_critic_score - U.avg_user_score) AS diff
+FROM users_avg_year_rating AS U
+LEFT JOIN critics_avg_year_rating AS C
+USING (year)
+WHERE C.avg_critic_score > 9
+   OR U.avg_user_score > 9
+ORDER BY U.year ASC;
+```
