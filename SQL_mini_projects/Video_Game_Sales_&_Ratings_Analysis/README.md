@@ -144,3 +144,22 @@ LIMIT 10;
 
 
 Save the output as a DataFrame named **`golden_years`**.
+---
+
+## 🥈 Solution 2 – Top 10 Years by Average Critic Score
+
+### Objective
+
+Find the ten years with the highest average critic score, including only years where at least four games were released, sorted by `avg_critic_score` in descending order.
+
+### SQL Query
+
+```sql
+SELECT
+    year,
+    num_games,
+    ROUND(avg_critic_score, 2) AS avg_critic_score
+FROM critics_avg_year_rating
+WHERE num_games >= 4
+ORDER BY avg_critic_score DESC
+LIMIT 10;
