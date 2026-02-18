@@ -141,3 +141,23 @@ SELECT *
 FROM game_sales
 ORDER BY games_sold DESC
 LIMIT 10;
+
+---
+
+## 🏆 Solution 2 – Top 10 Years by Average Critic Score
+
+### Objective
+
+Find the ten years with the highest average critic score, including only years where at least four games were released to ensure a reliable sample size. The results should be sorted by `avg_critic_score` in descending order and rounded to 2 decimal places.
+
+### SQL Query
+
+```sql
+SELECT
+    year,
+    num_games,
+    ROUND(avg_critic_score, 2) AS avg_critic_score
+FROM critics_avg_year_rating
+WHERE num_games >= 4
+ORDER BY avg_critic_score DESC
+LIMIT 10;
