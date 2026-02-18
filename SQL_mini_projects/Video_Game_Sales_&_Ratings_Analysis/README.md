@@ -141,7 +141,6 @@ SELECT *
 FROM game_sales
 ORDER BY games_sold DESC
 LIMIT 10;
-
 ---
 
 ## 🏆 Solution 2 – Top 10 Years by Average Critic Score
