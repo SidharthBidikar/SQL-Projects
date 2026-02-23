@@ -121,6 +121,7 @@ INNER JOIN categories AS c2
 GROUP BY c1.continent, c2.category
 ORDER BY c1.continent, year_founded;
 ```
+<img width="978" height="779" alt="image" src="https://github.com/user-attachments/assets/ab484b7f-3346-4636-9581-6b8a15e72ef7" />
 
 ---
 
