@@ -98,7 +98,7 @@ LEFT JOIN (
 WHERE all_businesses.country_code IS NULL
 GROUP BY c.continent;
 ```
-
+<img width="914" height="690" alt="image" src="https://github.com/user-attachments/assets/e837bbf9-4e16-41cd-9405-f66a6c99df30" />
 ---
 
 ## 3️⃣ Oldest Business by Continent and Category
