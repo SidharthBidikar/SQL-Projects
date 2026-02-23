@@ -72,7 +72,7 @@ INNER JOIN (
     ON c.continent = oldest.continent
     AND b.year_founded = oldest.year_founded;
 ```
-
+<img width="950" height="689" alt="image" src="https://github.com/user-attachments/assets/43298918-58a6-4b81-bda0-17b68b63ed0e" />
 ---
 
 ## 2️⃣ Countries Missing Oldest Business Data
