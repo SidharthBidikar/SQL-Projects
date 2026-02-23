@@ -40,48 +40,87 @@ Same structure as `businesses`, containing additional records.
 
 ---
 
-## 🎯 Project Objectives
-
-### 1️⃣ Identify the Oldest Business on Each Continent
-
-- Join `businesses` with `countries`
-- Determine the minimum founding year per continent
-- Return:
-  - `continent`
-  - `country`
-  - `business`
-  - `year_founded`
-
-This reveals which businesses have survived the longest within each continent.
+## 🎯 Project Objectives & SQL Solutions
 
 ---
 
-### 2️⃣ Analyze Missing Data by Continent
+## 1️⃣ Oldest Business on Each Continent
 
-- Identify how many countries per continent lack oldest business data
-- Include records from both `businesses` and `new_businesses`
-- Count countries without business records
+### Objective
+Identify the oldest business on each continent by joining country and business data and selecting the minimum founding year per continent.
 
-Return:
-  - `continent`
-  - `countries_without_businesses`
+### SQL Query
 
-This helps assess dataset completeness and coverage.
+```sql
+SELECT
+    c.continent,
+    c.country,
+    b.business,
+    b.year_founded
+FROM countries AS c
+INNER JOIN businesses AS b
+    ON b.country_code = c.country_code
+INNER JOIN (
+    SELECT
+        c.continent,
+        MIN(b.year_founded) AS year_founded
+    FROM countries AS c
+    INNER JOIN businesses AS b
+        ON b.country_code = c.country_code
+    GROUP BY c.continent
+) AS oldest
+    ON c.continent = oldest.continent
+    AND b.year_founded = oldest.year_founded;
+```
 
 ---
 
-### 3️⃣ Determine Which Business Categories Last the Longest
+## 2️⃣ Countries Missing Oldest Business Data
 
-- Join `businesses`, `countries`, and `categories`
-- For each continent and category combination:
-  - Identify the oldest founding year
+### Objective
+Count how many countries per continent do not have oldest business records. Include both `businesses` and `new_businesses` tables.
 
-Return:
-  - `continent`
-  - `category`
-  - `year_founded`
+### SQL Query
 
-This helps uncover which industries tend to endure over centuries.
+```sql
+SELECT
+    c.continent,
+    COUNT(*) AS countries_without_businesses
+FROM countries AS c
+LEFT JOIN (
+    SELECT *
+    FROM businesses
+    UNION
+    SELECT *
+    FROM new_businesses
+) AS all_businesses
+    ON c.country_code = all_businesses.country_code
+WHERE all_businesses.country_code IS NULL
+GROUP BY c.continent;
+```
+
+---
+
+## 3️⃣ Oldest Business by Continent and Category
+
+### Objective
+Determine which business categories last the longest by finding the earliest founding year for each continent and category combination.
+
+### SQL Query
+
+```sql
+SELECT
+    c1.continent,
+    c2.category,
+    MIN(b.year_founded) AS year_founded
+FROM countries AS c1
+INNER JOIN businesses AS b
+    ON c1.country_code = b.country_code
+INNER JOIN categories AS c2
+    ON c2.category_code = b.category_code
+GROUP BY c1.continent, c2.category
+ORDER BY c1.continent, year_founded;
+```
 
 ---
 
@@ -110,7 +149,3 @@ Understanding why some businesses endure for centuries provides valuable perspec
 - SQL
 - DataFrame outputs for structured analysis
 - GitHub for documentation
-
----
-
-This project strengthens real-world SQL problem-solving skills by combining business thinking with structured data analysis.
